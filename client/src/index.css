@@ -1,0 +1,129 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --ink: #0f0e0d;
+  --ink2: #3a3832;
+  --ink3: #7a7670;
+  --paper: #faf8f4;
+  --paper2: #f0ede6;
+  --paper3: #e5e0d5;
+  --accent: #c85a2e;
+  --accent2: #e8a060;
+  --teal: #1d7a6e;
+  --teal2: #e0f2ef;
+  --gold: #c4960a;
+  --gold2: #fdf4d8;
+  --primary: #004aad;
+  --secondry: #1b5e20;
+  --tertiary: #2e7d32;
+  --neutral: #f8f9fa;
+  --border: rgba(15, 14, 13, 0.12);
+  --r: 12px;
+  --r2: 20px;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 4px 16px rgba(0, 0, 0, 0.04);
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  min-height: 100vh;
+}
+
+.syne {
+  font-family: 'Syne', sans-serif;
+}
+
+/* Utility animations */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.45;
+  }
+}
+
+.fade-up {
+  animation: fadeUp 0.4s ease both;
+}
+
+/* Flashcard flip */
+.card-flip-container {
+  perspective: 1000px;
+}
+
+.card-flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-flip-inner.flipped {
+  transform: rotateY(180deg);
+}
+
+.card-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  border-radius: var(--r2);
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+
+/* Form base resets */
+input,
+textarea,
+select,
+button {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
