@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+# 🖥 Scholar AI Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The frontend of Scholar AI is a modern, high-performance web application built with **React**. It provides a seamless and intuitive interface for students to manage their study materials and leverage AI-powered learning tools.
 
-## Available Scripts
+## 🎨 Design Philosophy
 
-In the project directory, you can run:
+- **Modern & Premium**: Uses a custom-built design system with tokens for colors, spacing, and typography.
+- **Glassmorphism & Gradients**: Subtle visual effects to create a premium, state-of-the-art feel.
+- **Micro-animations**: Smooth transitions and hover effects to enhance the user experience.
+- **Accessibility**: Built with semantic HTML and appropriate heading structures.
 
-### `npm start`
+## 🚀 Key Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Dashboard**: A central hub to view recent materials, study progress, and quick stats.
+- **Upload Center**: Drag-and-drop or paste functionality to ingest new study content.
+- **Study Hub & Quiz Center**: Dedicated areas to focus on specific learning modes.
+- **Profile & Settings**: Full control over user account details and application preferences.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠 Tech Stack
 
-### `npm test`
+- **Framework**: [React](https://reactjs.org/)
+- **Routing**: [React Router](https://reactrouter.com/)
+- **State Management**: React Context API (Auth Context)
+- **Icons**: [Material Symbols Outlined](https://fonts.google.com/icons)
+- **Fonts**: [Manrope](https://fonts.google.com/specimen/Manrope) (Headings), [Inter](https://fonts.google.com/specimen/Inter) (Body)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📁 Directory Structure
 
-### `npm run build`
+- `src/api`: Axios/Fetch client configuration for API communication.
+- `src/components`: Reusable UI components (Navbar, Spinner, Progress bars).
+- `src/context`: React Context providers for global state.
+- `src/hooks`: Custom hooks for data fetching (Flashcards, Materials).
+- `src/pages`: Individual page components (Homepage, Dashboard, StudyPage, etc.).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## ⚙️ Development
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Scripts
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- `npm start`: Runs the app in development mode at [http://localhost:3000](http://localhost:3000).
+- `npm run build`: Builds the app for production.
 
-### `npm run eject`
+### Environment
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Ensure a `.env` file exists in the root of the project (parent directory) or is properly linked. The client expects to communicate with the backend on the port specified in your configuration.
